@@ -5,6 +5,9 @@ Fork from the unimol project [[Paper](https://openreview.net/forum?id=6K2RM6wVqK
 
 Authors: Guhao Feng, Yixian Xu, Jizhe Zhang
 
+## Unimol Checkpoint
+We use the pretrained checkpoint from [here](https://github.com/deepmodeling/Uni-Mol/releases/download/v0.1/mol_pre_no_h_220816.pt)
+
 ## Dependencies
 [[Uni-Core](https://github.com/dptech-corp/Uni-Core)], check its Installation Documentation.
 
