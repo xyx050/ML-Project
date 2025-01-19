@@ -6,7 +6,8 @@ Fork from the unimol project [[Paper](https://openreview.net/forum?id=6K2RM6wVqK
 Authors: Guhao Feng, Yixian Xu, Jizhe Zhang
 
 ## Dependencies
-Uni-Core(\url{https://github.com/dptech-corp/Uni-Core}), check its Installation Documentation.
+[[Uni-Core](https://github.com/dptech-corp/Uni-Core})], check its Installation Documentation.
+
 rdkit==2022.9.3, install via pip install rdkit-pypi==2022.9.3
 
 ## How to get features
