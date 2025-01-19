@@ -12,3 +12,9 @@ How to get features
 CUDA_VISIBLE_DEVICES="0" python ./unimol/infer_feature.py --user-dir ./unimol $data_path --results-path $output_dir --num-workers 8 --batch-size 1 --task mol_finetune --task-name $data_subset --num-classes 128 --loss finetune_cross_entropy  --arch unimol_base --path $ckpt_path --only-polar 0 --dict-name 'dict.txt' --conf-size 11 --log-interval 50 --log-format simple --valid-subset test,train,valid --fp16 --fp16-init-scale 4 --fp16-scale-window 256 --classification-head-name None --mode infer
 
 ```
+
+## Run ML Algorithm
+
+```bash
+bash ./run.sh
+```
