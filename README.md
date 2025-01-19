@@ -1,17 +1,9 @@
-Uni-Mol: A Universal 3D Molecular Representation Learning Framework 
+ML Molecule Classification Project
 ===================================================================
 
-[[Paper](https://openreview.net/forum?id=6K2RM6wVqKu)], [[Uni-Mol Docking Colab](https://colab.research.google.com/github/deepmodeling/Uni-Mol/blob/main/unimol/notebooks/unimol_binding_pose_demo.ipynb)]
+Fork from the unimol project [[Paper](https://openreview.net/forum?id=6K2RM6wVqKu)], [[Uni-Mol Docking Colab](https://colab.research.google.com/github/deepmodeling/Uni-Mol/blob/main/unimol/notebooks/unimol_binding_pose_demo.ipynb)]
 
-Authors: Gengmo Zhou, Zhifeng Gao, Qiankun Ding, Hang Zheng, Hongteng Xu, Zhewei Wei, Linfeng Zhang, Guolin Ke 
-
-Uni-Mol is a universal 3D molecular pretraining framework that significantly enlarges the representation ability and application scope in drug design. 
-
-<p align="center"><img src="figure/overview.png" width=80%></p>
-<p align="center"><b>Schematic illustration of the Uni-Mol framework</b></p>
-
-Uni-Mol comprises two models: a molecular pretraining model that has been trained using 209M molecular 3D conformations, and a pocket pretraining model that has been trained using 3M candidate protein pocket data. These two models can be used independently for different tasks and are combined for protein-ligand binding tasks. Uni-Mol has demonstrated superior performance compared to the state-of-the-art (SOTA) in 14 out of 15 molecular property prediction tasks. Moreover, Uni-Mol has achieved exceptional accuracy in 3D spatial tasks, such as protein-ligand binding pose prediction and molecular conformation generation.
-
+Authors: Guhao Feng, Yixian Xu, Jizhe Zhang
 
 How to get features
 ------------------------------
