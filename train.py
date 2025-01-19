@@ -36,7 +36,7 @@ def prepare_data(path, dim=None):
     for i in tqdm.tqdm(data):
         i['feature'] = i['feature'].mean(axis=0).numpy()
         X_list.append(i['feature'])
-        if dim == -1:
+        if i['label'].dim() == 0:
             y_list.append(i['label'].item())
         else:
             y_list.append(i['label'][dim].item())
@@ -53,10 +53,10 @@ def main(args):
     model_type = args.model_type
     train_path = os.path.join(args.data_root, data, "train.pkl")
     test_path = os.path.join(args.data_root, data, "test.pkl")
-#    val_path = os.path.join(args.data_root, data, "valid.pkl")
+    val_path = os.path.join(args.data_root, data, "valid.pkl")
     X_train, y_train = prepare_data(train_path, args.dim)
     X_test, y_test = prepare_data(test_path, args.dim)
-    # X_val, y_val = prepare_data(val_path, args.dim)
+    X_val, y_val = prepare_data(val_path, args.dim)
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
     data_size = X_train.shape[0]
@@ -78,11 +78,11 @@ def main(args):
     joblib.dump(model, f'{model_type}_{data}.pkl')
     model = joblib.load(f'{model_type}_{data}.pkl')
     y_test_pred = model.predict(X_test)
-    # y_val_pred = model.predict(X_val)
+    y_val_pred = model.predict(X_val)
     test_acc = accuracy_score(y_test, y_test_pred)
-    # val_acc = accuracy_score(y_val, y_val_pred)
+    val_acc = accuracy_score(y_val, y_val_pred)
     test_auc = roc_auc_score(y_test, y_test_pred)
-    # val_auc = roc_auc_score(y_val, y_val_pred)
+    val_auc = roc_auc_score(y_val, y_val_pred)
     info = f"model_type: {model_type}; data: {data}; dim: {args.dim}\ntest_acc: {round(test_acc,4)}; test_auc: {round(test_auc,4)};"
     with open("train_info.txt", 'a') as f:
         f.write(info)
