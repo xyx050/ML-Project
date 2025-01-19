@@ -10,6 +10,8 @@ Authors: Guhao Feng, Yixian Xu, Jizhe Zhang
 
 rdkit==2022.9.3, install via pip install rdkit-pypi==2022.9.3
 
+scikit-learn==1.6.1, install via pip install scikit-learn==1.6.1
+
 ## How to get features
 ------------------------------
 
